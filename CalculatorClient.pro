@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -24,8 +24,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        connectiondialog.cpp
+        connectiondialog.cpp \
+    client.cpp \
+    calculatorwindow.cpp
 
-HEADERS  += connectiondialog.h
+HEADERS  += connectiondialog.h \
+    client.h \
+    calculatorwindow.h
 
-FORMS    += connectiondialog.ui
+FORMS    += connectiondialog.ui \
+    calculatorwindow.ui
