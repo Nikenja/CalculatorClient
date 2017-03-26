@@ -6,25 +6,25 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>248</width>
-    <height>228</height>
+    <width>243</width>
+    <height>315</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Calculator</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout_3">
+  <layout class="QGridLayout" name="calculatorGridLayout">
    <property name="leftMargin">
     <number>3</number>
    </property>
    <property name="topMargin">
-    <number>0</number>
+    <number>3</number>
    </property>
    <property name="rightMargin">
     <number>3</number>
    </property>
    <property name="bottomMargin">
-    <number>0</number>
+    <number>3</number>
    </property>
    <property name="horizontalSpacing">
     <number>6</number>
@@ -39,6 +39,9 @@
      </property>
      <item>
       <layout class="QVBoxLayout" name="spaceEditVerticalLayout">
+       <property name="spacing">
+        <number>3</number>
+       </property>
        <property name="leftMargin">
         <number>0</number>
        </property>
@@ -46,24 +49,19 @@
         <number>0</number>
        </property>
        <item>
-        <widget class="QLineEdit" name="spaceEdit">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>30</height>
-          </size>
-         </property>
-         <property name="cursor">
-          <cursorShape>IBeamCursor</cursorShape>
-         </property>
-         <property name="focusPolicy">
-          <enum>Qt::TabFocus</enum>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        <widget class="QTextEdit" name="msgText">
+         <property name="autoFillBackground">
+          <bool>false</bool>
          </property>
          <property name="readOnly">
-          <bool>false</bool>
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="spaceEdit">
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
          </property>
         </widget>
        </item>
@@ -71,6 +69,12 @@
      </item>
      <item>
       <layout class="QGridLayout" name="numpadGridLayout">
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="horizontalSpacing">
+        <number>6</number>
+       </property>
        <item row="3" column="0">
         <widget class="QToolButton" name="buttonFour">
          <property name="minimumSize">
@@ -253,23 +257,6 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="3">
-        <layout class="QHBoxLayout" name="buttonDelHorizontalLayout">
-         <item>
-          <widget class="QToolButton" name="buttonDel">
-           <property name="minimumSize">
-            <size>
-             <width>45</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>&lt;-</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
        <item row="5" column="3">
         <widget class="QToolButton" name="buttonAdd">
          <property name="minimumSize">
@@ -296,6 +283,26 @@
          </property>
         </widget>
        </item>
+       <item row="0" column="3">
+        <layout class="QHBoxLayout" name="buttonDelHorizontalLayout">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QToolButton" name="buttonDel">
+           <property name="minimumSize">
+            <size>
+             <width>45</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>&lt;-</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
       </layout>
      </item>
     </layout>
@@ -304,6 +311,7 @@
  </widget>
  <tabstops>
   <tabstop>spaceEdit</tabstop>
+  <tabstop>buttonEqual</tabstop>
   <tabstop>buttonZero</tabstop>
   <tabstop>buttonOne</tabstop>
   <tabstop>buttonTwo</tabstop>
@@ -319,8 +327,8 @@
   <tabstop>buttonSub</tabstop>
   <tabstop>buttonMul</tabstop>
   <tabstop>buttonDiv</tabstop>
-  <tabstop>buttonEqual</tabstop>
   <tabstop>buttonDel</tabstop>
+  <tabstop>msgText</tabstop>
  </tabstops>
  <resources/>
  <connections/>

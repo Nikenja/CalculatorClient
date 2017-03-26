@@ -6,6 +6,8 @@ CalculatorWindow::CalculatorWindow(QWidget *parent) : QWidget(parent), ui(new Ui
     ui->setupUi(this);
     connectSignalsAndSlots();
     setValidatorOnSpaceEdit();
+    ui->buttonEqual->setEnabled(false);
+    ui->msgText->setAlignment(Qt::AlignRight);
 }
 
 CalculatorWindow::~CalculatorWindow(){
@@ -29,6 +31,9 @@ void CalculatorWindow::connectSignalsAndSlots(){
     connect(ui->buttonMul, SIGNAL(clicked(bool)), this, SLOT(clickedButtonMul()));
     connect(ui->buttonDiv, SIGNAL(clicked(bool)), this, SLOT(clickedButtonDiv()));
     connect(ui->buttonDel, SIGNAL(clicked(bool)), this, SLOT(clickedButtonDel()));
+    connect(ui->buttonEqual, SIGNAL(clicked(bool)), this, SLOT(clickedButtonEqual()));
+    connect(ui->spaceEdit, SIGNAL(textChanged(QString)), this, SLOT(enableButtonEqual()));
+    connect(ui->spaceEdit, SIGNAL(returnPressed()), this, SLOT(clickedButtonEqual()));
 }
 
 void CalculatorWindow::setValidatorOnSpaceEdit(){
@@ -100,4 +105,16 @@ void CalculatorWindow::clickedButtonDel(){
     if(ui->spaceEdit->text().isEmpty())
         return;
     ui->spaceEdit->setText(ui->spaceEdit->text().left(ui->spaceEdit->text().size()-1));
+}
+
+void CalculatorWindow::clickedButtonEqual(){
+    emit sendExpression(ui->spaceEdit->text());
+}
+
+void CalculatorWindow::printAnswerFromServer(const QString answer){
+    ui->msgText->append(answer);
+}
+
+void CalculatorWindow::enableButtonEqual(){
+    ui->buttonEqual->setEnabled(ui->spaceEdit->hasAcceptableInput());
 }

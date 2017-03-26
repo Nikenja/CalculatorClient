@@ -19,6 +19,8 @@ private:
     Ui::CalculatorWindow *ui;
     void connectSignalsAndSlots();
     void setValidatorOnSpaceEdit();
+signals:
+    void sendExpression(const QString expression);
 public slots:
     void clickedButtonZero();
     void clickedButtonOne();
@@ -36,6 +38,9 @@ public slots:
     void clickedButtonMul();
     void clickedButtonDiv();
     void clickedButtonDel();
+    void clickedButtonEqual();
+    void printAnswerFromServer(const QString answer);
+    void enableButtonEqual();
 };
 
 #endif // CALCULATORWINDOW_H
