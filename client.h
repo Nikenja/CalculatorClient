@@ -20,9 +20,6 @@ public slots:
     void failConnect();
     void sendToServer(const QString expression);
     void readyRead();
-
-
-public slots:
 };
 
 #endif // CLIENT_H

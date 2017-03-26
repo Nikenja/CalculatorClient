@@ -10,7 +10,6 @@ class CalculatorWindow;
 class CalculatorWindow : public QWidget
 {
     Q_OBJECT
-
 public:
     explicit CalculatorWindow(QWidget *parent = 0);
     ~CalculatorWindow();
