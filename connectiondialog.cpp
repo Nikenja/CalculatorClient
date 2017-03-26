@@ -6,7 +6,7 @@ ConnectionDialog::ConnectionDialog(QWidget *parent) : QDialog(parent), ui(new Ui
     ui->setupUi(this);
     ui->labelMsgError->setHidden(true);
     //TODO откоментить, для быстр включения
-//    ui->pushButtonConnect->setDisabled(true);
+//    ui->buttonConnect->setDisabled(true);
     setValidatorOnLineEditAddressPort();
     connectSignalsAndSlots();
 }
@@ -16,9 +16,9 @@ ConnectionDialog::~ConnectionDialog(){
 }
 
 void ConnectionDialog::connectSignalsAndSlots(){
-    connect(ui->lineEditAddressPort, SIGNAL(textChanged(QString)), this, SLOT(enablePushButtonConnect()));
-    connect(ui->lineEditAddressPort, SIGNAL(returnPressed()), this, SLOT(clickedPushButtonConnect()));
-    connect(ui->pushButtonConnect, SIGNAL(clicked(bool)), this, SLOT(clickedPushButtonConnect()));
+    connect(ui->lineEditAddressPort, SIGNAL(textChanged(QString)), this, SLOT(enableButtonConnect()));
+    connect(ui->lineEditAddressPort, SIGNAL(returnPressed()), this, SLOT(clickedButtonConnect()));
+    connect(ui->buttonConnect, SIGNAL(clicked(bool)), this, SLOT(clickedButtonConnect()));
 }
 
 void ConnectionDialog::setValidatorOnLineEditAddressPort(){
@@ -26,7 +26,7 @@ void ConnectionDialog::setValidatorOnLineEditAddressPort(){
     ui->lineEditAddressPort->setValidator(new QRegExpValidator(regExpOnLineEdit,this));
 }
 
-void ConnectionDialog::clickedPushButtonConnect(){
+void ConnectionDialog::clickedButtonConnect(){
     //TODO убрать
     ui->lineEditAddressPort->setText("127.0.0.1:1428");
     if(!isValidPort()){
@@ -36,8 +36,8 @@ void ConnectionDialog::clickedPushButtonConnect(){
     emit connectToServer(QString("127.0.0.1"),1428);
 }
 
-void ConnectionDialog::enablePushButtonConnect(){
-    ui->pushButtonConnect->setEnabled(ui->lineEditAddressPort->hasAcceptableInput());
+void ConnectionDialog::enableButtonConnect(){
+    ui->buttonConnect->setEnabled(ui->lineEditAddressPort->hasAcceptableInput());
 }
 
 bool ConnectionDialog::isValidPort(){

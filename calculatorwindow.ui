@@ -30,7 +30,7 @@
     <number>6</number>
    </property>
    <item row="0" column="0">
-    <layout class="QVBoxLayout" name="verticalLayout">
+    <layout class="QVBoxLayout" name="calculatorVerticalLayout">
      <property name="leftMargin">
       <number>0</number>
      </property>
@@ -38,7 +38,7 @@
       <number>0</number>
      </property>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
+      <layout class="QVBoxLayout" name="spaceEditVerticalLayout">
        <property name="leftMargin">
         <number>0</number>
        </property>
@@ -46,7 +46,7 @@
         <number>0</number>
        </property>
        <item>
-        <widget class="QLineEdit" name="lineEdit">
+        <widget class="QLineEdit" name="spaceEdit">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -70,9 +70,9 @@
       </layout>
      </item>
      <item>
-      <layout class="QGridLayout" name="gridLayout">
+      <layout class="QGridLayout" name="numpadGridLayout">
        <item row="3" column="0">
-        <widget class="QToolButton" name="toolButtonFour">
+        <widget class="QToolButton" name="buttonFour">
          <property name="minimumSize">
           <size>
            <width>55</width>
@@ -85,7 +85,7 @@
         </widget>
        </item>
        <item row="4" column="0">
-        <widget class="QToolButton" name="toolButtonOne">
+        <widget class="QToolButton" name="buttonOne">
          <property name="minimumSize">
           <size>
            <width>55</width>
@@ -98,7 +98,7 @@
         </widget>
        </item>
        <item row="5" column="0">
-        <widget class="QToolButton" name="toolButtonZero">
+        <widget class="QToolButton" name="buttonZero">
          <property name="minimumSize">
           <size>
            <width>55</width>
@@ -111,7 +111,7 @@
         </widget>
        </item>
        <item row="3" column="2">
-        <widget class="QToolButton" name="toolButtonSix">
+        <widget class="QToolButton" name="buttonSix">
          <property name="minimumSize">
           <size>
            <width>55</width>
@@ -124,7 +124,7 @@
         </widget>
        </item>
        <item row="5" column="2">
-        <widget class="QToolButton" name="toolButtonEqual">
+        <widget class="QToolButton" name="buttonEqual">
          <property name="minimumSize">
           <size>
            <width>55</width>
@@ -137,7 +137,7 @@
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QToolButton" name="toolButtonEight">
+        <widget class="QToolButton" name="buttonEight">
          <property name="minimumSize">
           <size>
            <width>55</width>
@@ -150,7 +150,7 @@
         </widget>
        </item>
        <item row="2" column="2">
-        <widget class="QToolButton" name="toolButtonNine">
+        <widget class="QToolButton" name="buttonNine">
          <property name="minimumSize">
           <size>
            <width>55</width>
@@ -163,7 +163,7 @@
         </widget>
        </item>
        <item row="2" column="0">
-        <widget class="QToolButton" name="toolButtonSeven">
+        <widget class="QToolButton" name="buttonSeven">
          <property name="minimumSize">
           <size>
            <width>55</width>
@@ -176,7 +176,7 @@
         </widget>
        </item>
        <item row="4" column="2">
-        <widget class="QToolButton" name="toolButtonThree">
+        <widget class="QToolButton" name="buttonThree">
          <property name="minimumSize">
           <size>
            <width>55</width>
@@ -189,7 +189,7 @@
         </widget>
        </item>
        <item row="5" column="1">
-        <widget class="QToolButton" name="toolButtonDot">
+        <widget class="QToolButton" name="buttonDot">
          <property name="minimumSize">
           <size>
            <width>55</width>
@@ -202,7 +202,7 @@
         </widget>
        </item>
        <item row="3" column="3">
-        <widget class="QToolButton" name="toolButtonMul">
+        <widget class="QToolButton" name="buttonMul">
          <property name="minimumSize">
           <size>
            <width>55</width>
@@ -215,7 +215,7 @@
         </widget>
        </item>
        <item row="4" column="3">
-        <widget class="QToolButton" name="toolButtonSub">
+        <widget class="QToolButton" name="buttonSub">
          <property name="minimumSize">
           <size>
            <width>55</width>
@@ -228,7 +228,7 @@
         </widget>
        </item>
        <item row="3" column="1">
-        <widget class="QToolButton" name="toolButtonFive">
+        <widget class="QToolButton" name="buttonFive">
          <property name="minimumSize">
           <size>
            <width>55</width>
@@ -241,7 +241,7 @@
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QToolButton" name="toolButtonTwo">
+        <widget class="QToolButton" name="buttonTwo">
          <property name="minimumSize">
           <size>
            <width>55</width>
@@ -254,9 +254,9 @@
         </widget>
        </item>
        <item row="0" column="3">
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <layout class="QHBoxLayout" name="buttonDelHorizontalLayout">
          <item>
-          <widget class="QToolButton" name="toolButtonDel">
+          <widget class="QToolButton" name="buttonDel">
            <property name="minimumSize">
             <size>
              <width>45</width>
@@ -271,7 +271,7 @@
         </layout>
        </item>
        <item row="5" column="3">
-        <widget class="QToolButton" name="toolButtonAdd">
+        <widget class="QToolButton" name="buttonAdd">
          <property name="minimumSize">
           <size>
            <width>55</width>
@@ -284,7 +284,7 @@
         </widget>
        </item>
        <item row="2" column="3">
-        <widget class="QToolButton" name="toolButtonDiv">
+        <widget class="QToolButton" name="buttonDiv">
          <property name="minimumSize">
           <size>
            <width>55</width>
@@ -303,24 +303,24 @@
   </layout>
  </widget>
  <tabstops>
-  <tabstop>lineEdit</tabstop>
-  <tabstop>toolButtonZero</tabstop>
-  <tabstop>toolButtonOne</tabstop>
-  <tabstop>toolButtonTwo</tabstop>
-  <tabstop>toolButtonThree</tabstop>
-  <tabstop>toolButtonFour</tabstop>
-  <tabstop>toolButtonFive</tabstop>
-  <tabstop>toolButtonSix</tabstop>
-  <tabstop>toolButtonSeven</tabstop>
-  <tabstop>toolButtonEight</tabstop>
-  <tabstop>toolButtonNine</tabstop>
-  <tabstop>toolButtonDot</tabstop>
-  <tabstop>toolButtonAdd</tabstop>
-  <tabstop>toolButtonSub</tabstop>
-  <tabstop>toolButtonMul</tabstop>
-  <tabstop>toolButtonDiv</tabstop>
-  <tabstop>toolButtonEqual</tabstop>
-  <tabstop>toolButtonDel</tabstop>
+  <tabstop>spaceEdit</tabstop>
+  <tabstop>buttonZero</tabstop>
+  <tabstop>buttonOne</tabstop>
+  <tabstop>buttonTwo</tabstop>
+  <tabstop>buttonThree</tabstop>
+  <tabstop>buttonFour</tabstop>
+  <tabstop>buttonFive</tabstop>
+  <tabstop>buttonSix</tabstop>
+  <tabstop>buttonSeven</tabstop>
+  <tabstop>buttonEight</tabstop>
+  <tabstop>buttonNine</tabstop>
+  <tabstop>buttonDot</tabstop>
+  <tabstop>buttonAdd</tabstop>
+  <tabstop>buttonSub</tabstop>
+  <tabstop>buttonMul</tabstop>
+  <tabstop>buttonDiv</tabstop>
+  <tabstop>buttonEqual</tabstop>
+  <tabstop>buttonDel</tabstop>
  </tabstops>
  <resources/>
  <connections/>

@@ -18,24 +18,24 @@ public:
 private:
     Ui::CalculatorWindow *ui;
     void connectSignalsAndSlots();
-    void setValidatorOnLineEdit();
+    void setValidatorOnSpaceEdit();
 public slots:
-    void clickedToolButtonZero();
-    void clickedToolButtonOne();
-    void clickedToolButtonTwo();
-    void clickedToolButtonThree();
-    void clickedToolButtonFour();
-    void clickedToolButtonFive();
-    void clickedToolButtonSix();
-    void clickedToolButtonSeven();
-    void clickedToolButtonEight();
-    void clickedToolButtonNine();
-    void clickedToolButtonDot();
-    void clickedToolButtonAdd();
-    void clickedToolButtonSub();
-    void clickedToolButtonMul();
-    void clickedToolButtonDiv();
-    void clickedToolButtonDel();
+    void clickedButtonZero();
+    void clickedButtonOne();
+    void clickedButtonTwo();
+    void clickedButtonThree();
+    void clickedButtonFour();
+    void clickedButtonFive();
+    void clickedButtonSix();
+    void clickedButtonSeven();
+    void clickedButtonEight();
+    void clickedButtonNine();
+    void clickedButtonDot();
+    void clickedButtonAdd();
+    void clickedButtonSub();
+    void clickedButtonMul();
+    void clickedButtonDiv();
+    void clickedButtonDel();
 };
 
 #endif // CALCULATORWINDOW_H

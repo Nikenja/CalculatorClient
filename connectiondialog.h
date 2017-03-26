@@ -20,8 +20,8 @@ private:
 signals:
     void connectToServer(QString address, int port);
 public slots:
-    void clickedPushButtonConnect();
-    void enablePushButtonConnect();
+    void clickedButtonConnect();
+    void enableButtonConnect();
     void printErrorMsgInLabelMsgError(QString msg);
 };
 

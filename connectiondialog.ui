@@ -61,7 +61,7 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButtonConnect">
+        <widget class="QPushButton" name="buttonConnect">
          <property name="text">
           <string>Подключиться</string>
          </property>
