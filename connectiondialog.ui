@@ -28,7 +28,7 @@
      <item>
       <widget class="QLabel" name="labelInputAddressPort">
        <property name="text">
-        <string>Введите адрес и порт:</string>
+        <string>Enter address and port (address:port):</string>
        </property>
       </widget>
      </item>
@@ -63,7 +63,7 @@
        <item>
         <widget class="QPushButton" name="buttonConnect">
          <property name="text">
-          <string>Подключиться</string>
+          <string>Connect</string>
          </property>
         </widget>
        </item>

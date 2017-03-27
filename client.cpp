@@ -22,7 +22,7 @@ void Client::failConnect(){
 }
 
 void Client::sendToServer(const QString expression){
-    QByteArray dataForSend(expression.toUtf8());
+    QByteArray dataForSend = QByteArray::fromStdString(expression.toStdString());
     this->clientSocket->write(dataForSend);
 }
 

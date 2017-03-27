@@ -1,6 +1,7 @@
 #include "calculatorwindow.h"
 #include "ui_calculatorwindow.h"
 #include <QRegExp>
+#include <QTime>
 
 CalculatorWindow::CalculatorWindow(QWidget *parent) : QWidget(parent), ui(new Ui::CalculatorWindow){
     ui->setupUi(this);
@@ -112,7 +113,12 @@ void CalculatorWindow::clickedButtonEqual(){
 }
 
 void CalculatorWindow::printAnswerFromServer(const QString answer){
-    ui->msgText->append(answer);
+    QString result(ui->spaceEdit->text() + " = " + answer);
+    ui->msgText->append("Time: " + QTime::currentTime().toString());
+    ui->msgText->append(result);
+    bool isDigit = false;
+    answer.toDouble(&isDigit);
+    isDigit ? ui->spaceEdit->setText(answer) : ui->spaceEdit->setText("");
 }
 
 void CalculatorWindow::enableButtonEqual(){

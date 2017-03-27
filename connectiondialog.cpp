@@ -5,8 +5,7 @@
 ConnectionDialog::ConnectionDialog(QWidget *parent) : QDialog(parent), ui(new Ui::ConnectionDialog){
     ui->setupUi(this);
     ui->labelMsgError->setHidden(true);
-    //TODO откоментить, для быстр включения
-//    ui->buttonConnect->setDisabled(true);
+    ui->buttonConnect->setDisabled(true);
     setValidatorOnLineEditAddressPort();
     connectSignalsAndSlots();
 }
@@ -27,10 +26,8 @@ void ConnectionDialog::setValidatorOnLineEditAddressPort(){
 }
 
 void ConnectionDialog::clickedButtonConnect(){
-    //TODO убрать
-    ui->lineEditAddressPort->setText("127.0.0.1:1428");
     if(!isValidPort()){
-        emit printErrorMsgInLabelMsgError(QString("Некорректный порт"));
+        emit printErrorMsgInLabelMsgError(QString("Incorrect port"));
         return;
     }
     emit connectToServer(QString("127.0.0.1"),1428);
